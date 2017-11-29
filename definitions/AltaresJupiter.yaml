@@ -1,0 +1,89 @@
+paths:
+  /Jupiters/getMethods:
+    get:
+      tags:
+        - Jupiter
+      operationId: Jupiter.getMethodsGET
+      parameters:
+        - name: identification
+          in: query
+          description: A description
+          required: true
+          default: '12345'
+          type: string
+        - name: refClient
+          in: query
+          description: A description
+          required: true
+          default: '12345'
+          type: string
+        - name: sirenRna
+          in: query
+          description: A description
+          required: true
+          default: '12345'
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+      deprecated: false
+definitions: {}
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: intuizrest
+  version: 1.0.0
+  title: IntuizRest
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: >-
+          https://apiconnect-5f4dea2b-0d36-45b1-b4ca-5a00a1be66c2.altares-altares-rest.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  gateway: datapower-gateway
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

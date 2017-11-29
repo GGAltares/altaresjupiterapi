@@ -1,0 +1,77 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 58cc02530cf2341933872e66
+  name: altares-altares-rest
+  displayName: Altares (Altares-rest)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/58cc02530cf2341933872e66'
+  externalOrgId: 35e0dfb3-d697-4a52-aa3c-80818b9d5bcf
+  externalInviteOverride: 'https://console.eu-gb.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: 35e0dfb3-d697-4a52-aa3c-80818b9d5bcf
+  externalNativeOrgId: 3fada30d-f68e-4c07-8dac-f0ff8a413692
+catalog:
+  id: 58cc02530cf2341933872e72
+  orgId: 58cc02530cf2341933872e66
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 58c267520cf22a5ae3dd5345
+    username: germain.garnier@altares.com
+    context: apimanager
+    idpId: 58335d5ed20e47053bf50fd0
+    email: germain.garnier@altares.com
+    firstName: germain.garnier@altares.com
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2017-03-17T12:45:26.813+0000'
+    url: 'https://eu.apiconnect.ibmcloud.com/v1/users/58c267520cf22a5ae3dd5345'
+  apiCenter: false
+  baseUrl: 'https://api.eu.apiconnect.ibmcloud.com/altares-altares-rest/sb'
+  portalType: ADVANCED
+  portalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/altares-altares-rest/sb'
+  customPortalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/altares-altares-rest/sb'
+  advPortalUrl: 'https://sb-altares-altares-rest.developer.eu.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  idp: 58cc02540cf2341933872e73
+  idps:
+    - 58cc02540cf2341933872e73
+  availableRoles:
+    - viewer
+    - developer
+  default: false
+  autoDeploy: true
+  gatewayClusterUrl: /gatewayClusters/PRODAPIC_APIMGMT_GATEWAY
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: false
+  spaceEnabled: false
+  spaceIds:
+    - 58cc02540cf2341933872e7c
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: 15edbab6-c18b-4005-a05f-986f70917bd1
+    clientSecret: bX4sH7yP3cS7jA4nV7wH4tJ5wM8sA0iJ6bC0qA1vU4fD0eF4fN
+  createdAt: '2017-03-17T15:35:48.181+0000'
+  updatedAt: '2017-03-20T09:05:58.411+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: maxime.matheron@hec.edu
+  url: >-
+    https://eu.apiconnect.ibmcloud.com/v1/orgs/58cc02530cf2341933872e66/environments/58cc02530cf2341933872e72
+  productDeploymentApprovalRequiredStates: []
+  orgName: altares-altares-rest
+space:
+  none: true
+app:
+  new: true
+  name: altaresjupiterrest
+id: bb02bb95-c809-4a08-a3f5-9be62f426e81
+target: 1.0.0
